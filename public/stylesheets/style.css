@@ -1,0 +1,105 @@
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #041922;
+}
+.list-group-item{
+  font-size: large;
+  
+}
+
+.leftcontainer{
+  background-color: #49b9e6;
+  width:fit-content;
+  height:800px;
+  
+}
+.rightcontainer{
+  background-color: #aadaed;
+  margin-left: 172px;
+  height:800px;
+  /* border: 1px solid red; */
+  margin-top: -800px;
+}
+/* .maincontainer{
+  border: 2px solid red;
+} */
+.form{
+  margin-left: 30px;
+  
+}
+.btn1{
+  color: rgb(239, 134, 6);
+}
+.table{
+  border: 2px solid red;
+}
+.badge a{
+  text-decoration: none;
+  color: #532d2d;
+}
+/* input{
+  margin-right:right;
+} */
+.i{
+margin-left: 15px;
+}
+.sub{
+  margin-left: 26px;
+}
+.btnsub{
+  margin-left: 95px;
+}
+.image{
+  margin-left: 38px;
+}
+.price{
+  margin-left: 55px;
+}
+.category{
+  margin-left: 28px;
+}
+.desc{
+  margin-left: 10px;
+}
+.categorysub{
+  margin-left: 26px;
+}
+.mainbody{
+  border-color: 2px black solid;
+  height: 400px;
+}
+.carousel-inner{
+  height: 700px;
+  width: fit-content;
+} 
+  .row{ 
+ border: 2px solid rgb(9, 2, 39); 
+ height: 800px; 
+ 
+
+ }  
+ .card{
+  margin-left: 50px;
+ } 
+.productmain{
+  margin-left: 600px;
+}
+.email{
+  margin-left: 35px;
+}
+.userstatus{
+  visibility: hidden;
+}
+.registerform{
+  /* margin-left: 500px; */
+  background-color: aqua;
+  height: 800px;
+}
+.cart{
+  
+  margin-left: 140px;
+}

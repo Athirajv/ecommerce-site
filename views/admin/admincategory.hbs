@@ -1,0 +1,45 @@
+<div class="leftcontainer">
+  <h2><span class="badge"><a href="/admin/admincategory">Category</a></span></h2>
+  <h2> <span class="badge"><a href="/admin/adminsub">Subcategory</a></span></h2>
+  <h2><span class="badge"><a href="/admin/product">Product</a></span></h2>
+</div>
+<div class="rightcontainer">
+  {{! <div class="form"> }}
+  <h4>Add Category</h4>
+  <form action="/admin/admincategory" method="post" enctype="multipart/form-data">
+    <label for="">Category</label>
+    <input class="i" type="text" name="category" id=""  placeholder="Enter category" /><br /><br />
+    <label for="">Description</label>
+    <input ctype="text"name="description" id=""placeholder="Enter description"  /><br /><br />
+    <label for="">Image</label>
+    <input type="file" name="imag" class="image" id="" /><br /><br />
+  <button type="submit" class="btn btn-light">submit</button>
+  </form><br><br>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th  width="20%"scope="col">Category</th>
+        <th  width="30%" scope="col">Description</th>
+        <th   width="20%"scope="col">Image</th>
+         <th width="20%" colspan="2">Action</th>
+
+      </tr>
+    </thead>
+
+    
+   {{#each admininfo}}
+  <tr>
+
+    <td>{{this.Category}}</td>
+    <td>{{this.Description}}</td>
+    <td><img src="/images/{{this.image}}" height="100px"></td>
+    <td><a href="/admin/admincategory/{{_id}}">Delete</a></td>
+    <td><a href="/admin/admincategoryedit/{{_id}}">Edit</a></td>
+
+
+  </tr>
+  {{/each}}
+  </table>
+  
+</div>

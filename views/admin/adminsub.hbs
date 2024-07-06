@@ -1,0 +1,56 @@
+<div class="leftcontainer">
+  <h2><span class="badge"><a href="/admin/admincategory">Category</a></span></h2>
+  <h2> <span class="badge"><a href="/admin/adminsub">Subcategory</a></span></h2>
+  <h2><span class="badge"><a href="/admin/product">Product</a></span></h2>
+</div>
+<div class="rightcontainer">
+  {{! <div class="form"> }}
+  <h4>Add SubCategory</h4>
+  <form action="/admin/adminsub" method="post" >
+    <label for="">Category</label>
+    <select class="sub" name="scategory" style="width: 182px;">
+          <option value="select">select</option>
+         {{#each catinfo}}
+        
+         
+      <option value="{{this._id}}">{{this.Category}}</option>
+      
+       {{/each}} 
+        {{!-- <option value="mobile">mobile</option> 
+        <option value="mobile">mobile</option>
+         <option value="laptop">laptop</option> --}}
+     </select><br><br>
+    <label for="">SubCategory</label>
+    <input type="text" name="subcategory" id="" placeholder="Enter Subcategory" /><br><br>
+     {{!-- <button class="btnsub" type="submit">submit</button> --}}
+     <button type="submit" class="btn btn-light">submit</button>
+       </form>
+
+  
+  </form><br><br>
+
+  <table class="table">
+    <thead>
+      <tr>
+          <th scope="col">Category</th>
+        <th scope="col">Subcategory</th>
+         <th colspan="2">Action</th>
+      </tr>
+    </thead>
+ {{#each subcategoryinfo}}
+<tr>
+<td>{{this.list.Category}}</td>
+<td>{{this.Subcategory}}</td>
+<td><a href="/admin/adminsub/{{_id}}">Delete</a></td>
+ <td><a href="/admin/subcategoryedit/{{_id}}">Edit</a></td>
+
+</tr>
+{{/each}}
+  </table>
+
+
+
+
+
+
+

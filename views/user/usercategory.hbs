@@ -1,0 +1,23 @@
+<h1>category</h1>
+ 
+  
+  <div class="row">
+     {{#each productinfo}}
+   
+   <div class="col-sm-4">
+     <div class="card" style="width: 10rem;height:50px">
+  
+        <img src="/images/{{this.Image}}" class="card-img-top" alt="">
+          {{!-- <div class="card-body"> --}}
+            <h5 class="card-title">{{this.categorydetails.Category}}</h5>
+              <p class="card-text">{{this.Description}}</p>
+               <a href="/usercategory" class="btn btn-primary">Go</a>
+                </div>
+    </div>
+    {{/each}}
+          </div>
+    
+  </div>
+</div>
+
+</div>

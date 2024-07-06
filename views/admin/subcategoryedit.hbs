@@ -1,0 +1,41 @@
+<div class="leftcontainer">
+  <h2><span class="badge"><a href="/admin/admincategory">Category</a></span></h2>
+  <h2> <span class="badge"><a href="/admin/adminsub">Subcategory</a></span></h2>
+  <h2><span class="badge"><a href="">Other</a></span></h2>
+</div>
+<div class="rightcontainer">
+  {{! <div class="form"> }}
+  <h4>Add SubCategory</h4>
+  <form action="" method="post">
+    <label for="">Category</label>
+    <select name="scategory" id="sel" style="width: 187px;" class="categorysub">
+         {{#each catinfo}}
+      <option value="{{this._id}}">{{this.Category}}</option>
+      
+       {{/each}} 
+        {{!-- <option value="mobile">mobile</option> 
+        <option value="mobile">mobile</option>
+         <option value="laptop">laptop</option> --}}
+     </select><br><br>
+     <input type="hidden" id="hiddencell" value={{result.Category}}>
+    <label for="">SubCategory</label>
+    <input type="text" name="subcategory" value={{subcategoryinfo.Subcategory}} /><br><br>
+    <button type="submit" class="btn btn-light">submit</button>
+       </form>
+
+  
+  </form>
+     <script>
+
+        var categorySelect = document.getElementById('sel')
+        var hiddenvalue = document.getElementById('hiddencell').value
+        
+        
+        for (var i= 0; i <= categorySelect.options.length;i++){
+            var option= categorySelect.options[i]
+            if(option.value == hiddenvalue){
+                option.selected= true;
+                break;
+            }
+        }
+    </script>

@@ -1,0 +1,77 @@
+<div class="leftcontainer">
+  <h2><span class="badge"><a href="/admin/admincategory">Category</a></span></h2>
+  <h2> <span class="badge"><a href="/admin/adminsub">Subcategory</a></span></h2>
+  <h2><span class="badge"><a href="/admin/product">Product</a></span></h2>
+</div>
+<div class="rightcontainer">
+    <h1> Add Product</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="">Category</label>
+        <select name="category" id="" class="category" style="width: 182px;">
+               {{!-- <option value="select">select</option> --}}
+  {{#each catinfo}}
+     
+      <option value="{{this._id}}">{{this.Category}}</option>
+      
+       {{/each}} 
+            {{!-- <option value="product">product</option> --}}
+        </select><br><br>
+         <label for="">SubCategory</label>
+        <select name="subcategory" id="" style="width: 182px;">
+               {{!-- <option value="select">select</option> --}}
+              {{#each subcatinfo}}
+     
+      <option value="{{this._id}}">{{this.Subcategory}}</option>
+      
+       {{/each}} 
+            {{!-- <option value="subcategory">subcategory</option> --}}
+        </select><br><br>
+        <label for="">Price</label>
+        <input type="text"class="price" name="price"placeholder="Enter price" id=""><br><br>
+        <label for="">Description</label>
+        <input type="text" name="description"class="desc"placeholder="Enter description"  id=""><br><br>
+        <label for="">Productname</label>
+        <input type="text" name="productname" id="">
+        <label for="">Quantity</label>
+        <input type="text" name="quantity" class="category"id=""placeholder="Enter quantity" ><br><br>
+        <label for="">Image</label>
+        <input type="file" name="Image" id=""><br><br>
+        <button type="submit" class="btn btn-light">Submit</button>
+    </form>
+
+    
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Category</th>
+        <th>Subcategory</th>
+        <th>productname</th>
+        <th>Price</th>
+        <th scope="col">Description</th>
+        <th>Quantity</th>
+        <th  scope="col">Image</th>
+         <th  colspan="2">Action</th>
+
+      </tr>
+    </thead>
+
+    
+    {{#each productinfo}}
+  <tr>
+
+    <td>{{this.categorydetails.Category}}</td>
+     <td>{{this.subcategorydetails.Subcategory}}</td>
+     <td>{{this.Productname}}</td>
+      <td>{{this.Price}}</td>
+    <td>{{this.Description}}</td>
+     <td>{{this.Quantity}}</td>
+    <td><img src="/images/{{this.Image}}" height="100px"></td>
+    <td><a href="/admin/product/{{_id}}">Delete</a></td>
+    <td><a href="/admin/productedit/{{_id}}">Edit</a></td>
+
+
+  </tr>
+  {{/each}}
+  </table>
+  
+</div>

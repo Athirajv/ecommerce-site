@@ -1,0 +1,211 @@
+
+{{!-- <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="1000">
+      <img src="/images/cart.avif" class="d-block w-100" alt="click">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="/images/women.avif" class="d-block w-100 " alt="click">
+    </div>
+    <div class="carousel-item">
+      <img src="/images/online.avif" class="d-block w-100 " alt="click">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div> --}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Theme Company</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<style>
+.jumbotron {
+  background-color: rgb(225, 89, 5); /* Orange */
+  color: #ffffff;
+}
+</style>
+
+<body>
+  <div class="jumbotron text-center">
+    <h1>ShopCart</h1>
+    <p>We specialize in blablabla</p>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators" >
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="images/cart.avif" alt="New York" height="500px" width="1600px">
+      <div class="carousel-caption">
+        {{!-- <h3>New York</h3> --}}
+        {{!-- <p>The atmosphere in New York is lorem ipsum.</p> --}}
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="images/sale.avif"alt="Chicago" height="3
+      00px" width="1600px">
+      <div class="carousel-caption">
+        {{!-- <h3>Chicago</h3> --}}
+        {{!-- <p>Thank you, Chicago - A night we won't forget.</p> --}}
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="images/women.avif"alt="Los Angeles" height="500px" width="1600px">
+      <div class="carousel-caption">
+        {{!-- <h3>LA</h3> --}}
+        {{!-- <p>Even though the traffic was a mess, we had the best time.</p> --}}
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  </div>
+  
+</body>
+</body>
+</html>
+
+
+
+
+
+ <h2>All Categories</h2>
+  
+  <div class="row">
+     {{#each admininfo}}
+   
+   <div class="col-sm-4">
+     <div class="card" style="width: 10rem;height:50px">
+  
+        <img src="images/{{this.image}}" class="card-img-top" alt="">
+          {{!-- <div class="card-body"> --}}
+            <h5 class="card-title">{{this.Category}}</h5>
+              <p class="card-text">{{this.Description}}</p>
+               <a href="/usercategory/{{_id}}" class="btn btn-primary">Go</a>
+                </div>
+    </div>
+    {{/each}}
+          </div>
+    
+  </div>
+</div>
+
+</div>
+
+
+<br><br>
+{{!-- products --}}
+ <div>
+ <h2>All Products</h2>
+  
+  <div class="row">
+     {{#each productinfo}}
+   
+   <div class="col-sm-4">
+     <div class="card" style="width: 10rem;height:40px">
+  
+        <img src="images/{{this.Image}}" class="card-img-top" alt="">
+          {{!-- <div class="card-body"> --}}
+            <h5 class="card-title">{{this.categorydetails.Category}}</h5>
+              <p class="card-text">{{this.Price}}</p>
+               <a href="/userproduct/{{_id}}" class="btn btn-primary">Go</a>
+                </div>
+    </div>
+    {{/each}}
+          </div>
+    
+  </div>
+</div>
+
+</div>
+
+{{!-- <h1>All products</h1>
+<div class="rows">
+  {{#each productinfo}}
+  <div class="col-sm-4">
+  <div class="cards" style="width: 15rem;height:50px">
+  <img src="images/{{this.Image}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{this.Category}}</h5>
+    <p class="card-text">{{this.Price}}</p>
+    <a href="#" class="btn btn-primary">Go</a>
+  </div>
+ 
+  
+</div>
+ {{/each}}
+</div> --}}
+
+
+  {{!- <div class="col-sm-4">
+  <div class="card" style="width: 15rem;height:40px">
+  <img src="images/phone1.jpeg"height="180px" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Phone</h5>
+    <p class="card-text">Rs.30000</p>
+    <a href="#" class="btn btn-primary">Go</a>
+    
+  </div>
+  
+  </div>
+</div>
+  
+</div>
+<div class="col-sm-4">
+  <div class="card" style="width: 15rem;height:40px">
+  <img src="images/laptop1.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Laptop</h5>
+    <p class="card-text">Rs.40000</p>
+    <a href="#" class="btn btn-primary">Go</a>
+  </div>
+  
+</div>
+
+</div>
+--}}
+
+
+
+
+
+ 

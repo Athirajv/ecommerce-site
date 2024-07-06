@@ -1,0 +1,19 @@
+<div class="leftcontainer">
+  <h2><span class="badge"><a href="/admin/admincategory">Category</a></span></h2>
+  <h2> <span class="badge"><a href="/admin/adminsub">Subcategory</a></span></h2>
+  <h2><span class="badge"><a href="/admin/product">Product</a></span></h2>
+</div>
+<div class="rightcontainer">
+  {{! <div class="form"> }}
+  <h4>Edit Category</h4>
+  <form action="" method="post" enctype="multipart/form-data">
+    <label for="">Category</label>
+    
+    <input type="text" name="category" value="{{result.Category}}" id=""/><br /><br />
+    <label for="">Description</label>
+    <input type="text" name="description" value="{{result.Description}}" id=""/><br /><br />
+    <label for=""Image></label>
+    <input type="file" name="imag" id="" value="/images/{{result.image}}" /><br /><br />
+    <img src="/images/{{result.image}}" alt="">
+   <button type="submit" class="btn btn-light">submit</button>
+  </form>

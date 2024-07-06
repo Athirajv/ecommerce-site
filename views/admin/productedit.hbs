@@ -1,0 +1,68 @@
+<div class="leftcontainer">
+  <h2><span class="badge"><a href="/admin/admincategory">Category</a></span></h2>
+  <h2> <span class="badge"><a href="/admin/adminsub">Subcategory</a></span></h2>
+  <h2><span class="badge"><a href="/admin/product">Product</a></span></h2>
+</div>
+<div class="rightcontainer">
+    <h1> Edit Product</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="">Category</label>
+        <select name="category" id="sel" class="category" style="width: 182px;">
+               <option value="select">select</option>
+  {{#each catinfo}}
+     
+      <option value="{{this._id}}">{{this.Category}}</option>
+      
+       {{/each}} 
+            {{!-- <option value="product">product</option> --}}
+        </select><br><br>
+        <input type="hidden" id="hiddencell" value="{{result.Category}}">
+         <label for="">SubCategory</label>
+        <select name="subcategory" id="pro" style="width: 182px;">
+               <option value="select">select</option>
+              {{#each subcatinfo}}
+     
+      <option value="{{this._id}}">{{this.Subcategory}}</option>
+      
+       {{/each}} 
+            {{!-- <option value="subcategory">subcategory</option> --}}
+        </select><br><br>
+         <input type="hidden" id="hiddeninfo" value="{{result.Subcategory}}">
+        <label for="">Price</label>
+        <input type="text"class="price" name="price"value="{{result.Price}}" ><br><br>
+        <label for="">Description</label>
+        <input type="text" name="description"class="desc"value="{{result.Description}}"><br><br>
+        <label for="">Quantity</label>
+        <input type="text" name="quantity" class="category" value="{{result.Quantity}}" ><br><br>
+        <label for="">Image</label>
+        <input type="file" name="Image" value="/images/{{result.Image}}" ><br><br>
+        <img src="/images/{{result.Image}}" height="80px">
+        <button type="submit" class="btn btn-light">Submit</button>
+    </form>
+    <script>
+        //catinfo
+        var categorySelect = document.getElementById('sel')
+        var hiddenvalue = document.getElementById('hiddencell').value;
+        
+        
+        for (var i= 0; i <= categorySelect.options.length;i++){
+            var option= categorySelect.options[i]
+            if(option.value == hiddenvalue){
+                option.selected= true;
+                break;
+            }
+        }
+        //subcategoryinfo
+        var productselect = document.getElementById('pro')
+        var hiddenvalue = document.getElementById('hiddeninfo').value
+        
+        
+        for (var i= 0; i <= productselect.options.length;i++){
+            var option= productselect.options[i]
+            if(option.value == hiddenvalue){
+                option.selected= true;
+                break;
+            }
+        }
+
+    </script>

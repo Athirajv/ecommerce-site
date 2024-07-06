@@ -1,0 +1,26 @@
+
+<div class="productmain">
+
+<h2> Products</h2>
+  <div class="col-sm-4">
+   
+  <div class="card" style="width: 15rem;height:40px">
+     {{!-- {{#each result}} --}}
+  <img src="/images/{{result.Image}}"height="180px" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"> {{result.Productname}}</h5>
+    <p class="card-text">{{result.Price}}</p>
+     <p class="card-text">{{result.Description}}</p>
+    <a href="/cart/{{result._id}}" class="btn btn-primary">Add to cart</a>
+    {{!-- <button type="submit" class="btn btn-primary">Add to cart</button> --}}
+    <a href="#" class="btn btn-primary">Buy Now</a><br>
+    {{!-- <a href="/" class="card-link btn btn-primary">Back</a> --}}
+    
+  </div>
+   {{!-- {{/each}} --}}
+  </div>
+</div>
+ 
+</div>
+</div>
+
